@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    font-weight: 400;
+}
+:root{
+    --whitePrimary: hsl(0, 0%, 100%);
+    --nudeBg: hsl(29, 53%, 90%);
+    --stoneBg: hsl(30, 18%, 87%);
+    --stoneTitle: hsl(24, 5%, 18%);
+    --stoneText: hsl(30, 10%, 34%);
+    --brownSubTitles: hsl(14, 45%, 36%);
+    --roseTitle: hsl(332, 51%, 32%);
+    --roseBg: hsl(330, 100%, 98%);
+
+    --paddingSpace: 30px;
+}
+
+/* Standard */
+.ls_primaryTitle{
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'Young Serif';
+    color: var(--stoneTitle);
+    line-height: 2.3rem;
+    padding-bottom: var(--paddingSpace);
+
+}
+.ls_secondaryTitle{
+    font-size: 1.9rem;
+    font-weight: 500;
+    font-family: 'Young Serif';
+    color: var(--brownSubTitles);
+    padding-bottom: var(--paddingSpace);
+}
+.ls_paragText{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--stoneText);
+    padding-bottom: var(--paddingSpace);
+
+}
+.ls_paragText span{
+    font-weight: 700;
+}
+.ls_padding{
+    padding-top: var(--paddingSpace);
+}
+
+/* Main */
+.ls_container .ls_imgContainerMobile{
+    background-image: url(/assets/images/image-omelette.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 190px;
+    min-width: 375px;
+}
+.ls_imgContainerDesk{
+    display: none;
+}
+.ls_mainCointainer{
+    padding: 35px;
+}
+hr{
+    color: hsl(30, 54%, 90%);
+}
+/* Praparation time div */
+.ls_divPreparation{
+    background-color: var(--roseBg);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: var(--paddingSpace);
+}
+.ls_titlePreparation{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--roseTitle);
+    padding-bottom: var(--paddingSpace);
+}
+.ls_divPreparation ul li{
+    margin-left: 20px;
+    padding: 0px 0px 10px 20px;
+}
+/* Ingredients section */
+.ls_ulIngreds{
+    padding-left: 20px;
+    margin-bottom: var(--paddingSpace);
+}
+.ls_ulIngreds li{
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+/* Instruction Section */
+.ls_olInstruc{
+    padding-left: 20px;
+    margin-bottom: var(--paddingSpace);
+
+}
+.ls_olInstruc li{
+    padding-left: 20px;
+    color: var(--brownSubTitles);
+    font-weight: 700;
+}
+/* Nutrition Section */
+table{
+    border-collapse: collapse;
+}
+table tr td{
+    padding: 10px 80px 10px 20px;
+    border-bottom: 1px solid hsl(40, 10%, 75%);
+}
+.ls_tableLast{
+    border-bottom: 2px solid #fff;
+}
+.ls_tableLeft{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--stoneText);
+}
+.ls_tableRight{
+    color: var(--brownSubTitles);
+    font-weight: 700;
+}
+/* attribution */
+.attribution{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--stoneText);
+}
+/* Responsive */
+@media screen and (min-width:1440px) {
+    body{
+        background-color: var(--nudeBg);
+        padding: 40px;
+    }
+    .ls_container .ls_imgContainerDesk{
+        display: block;
+        background-image: url(/assets/images/image-omelette.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 16px;
+        height: 600px;
+        margin-bottom: 40px;
+    }
+    .ls_imgContainerMobile{
+        display: none;
+    }
+    .ls_mainCointainer{
+        max-width: 1440px;
+        background-color: var(--whitePrimary);
+        margin: auto;
+        border-radius: 20px;
+    }
+    table{
+        width: 100%;
+    }
+    table tr td{
+        padding-left: 30px;
+    }
+}
